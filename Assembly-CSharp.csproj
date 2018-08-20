@@ -57,18 +57,22 @@
      <Compile Include="Assets\Scripts\CharacterAbility.cs" />
      <Compile Include="Assets\Scripts\CharacterDash.cs" />
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\CharInputStateManager.cs" />
      <Compile Include="Assets\Scripts\CharMoveStateManager.cs" />
+     <Compile Include="Assets\Scripts\Helpers\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Managers\EMJStateManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\StateManager.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>/Users/marioadisurya/Documents/Game Development/LibertyGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>/Users/marioadisurya/Documents/GameDevelopment/LibertyGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/marioadisurya/Documents/Game Development/LibertyGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/marioadisurya/Documents/GameDevelopment/LibertyGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/marioadisurya/Documents/Game Development/LibertyGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/marioadisurya/Documents/GameDevelopment/LibertyGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/marioadisurya/Documents/Game Development/LibertyGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/marioadisurya/Documents/GameDevelopment/LibertyGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

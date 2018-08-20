@@ -11,7 +11,7 @@ public class CharacterAbility : MonoBehaviour {
 	protected float _verticalInput;
 	protected float _horizontalInput;
 
-	void Start()
+	protected virtual void Start()
 	{
 		_character = GetComponent<Character>();
 		_rigidBody = GetComponent<Rigidbody>();
@@ -19,11 +19,14 @@ public class CharacterAbility : MonoBehaviour {
 
 	void Update()
 	{	
+		_verticalInput = Input.GetAxis("Vertical");
+		_horizontalInput = Input.GetAxis("Horizontal");
+
 		Ability();
 	}
 
 	public virtual void Ability()
 	{
-
+		
 	}
 }

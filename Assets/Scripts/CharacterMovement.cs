@@ -7,8 +7,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour {
 
 	// public CharMoveStateManager charMoveStateManager;
-	private float verticalInputVal;
-	private float horizontalInputVal;
+	private float _verticalInput;
+	private float _horizontalInput;
 
 	protected Rigidbody m_RigidBody;
 
@@ -22,20 +22,18 @@ public class CharacterMovement : MonoBehaviour {
 	void Update()
 	{
 		// Get Input for vertical and horizontal presses
-		verticalInputVal = Input.GetAxis("Vertical");
-		horizontalInputVal = Input.GetAxis("Horizontal");
+		_verticalInput = Input.GetAxis("Vertical");
+		_horizontalInput = Input.GetAxis("Horizontal");
 
-		Move(verticalInputVal, horizontalInputVal, speed);
+		Move(_verticalInput, _horizontalInput, speed);
 	}
 
 	// Method that handles the moving of the character
-	void Move(float v, float h, float speed)
+	void Move(float v, float z, float speed)
 	{
-		float moveX = v * speed;
-		float moveZ = h * speed * -1;
+		v *= speed;
+		z *= speed * -1;
 
-		m_RigidBody.velocity = new Vector3(moveX, 0, moveZ);
-
-		if (moveX == 0 && moveZ == 0) { m_RigidBody.velocity = Vector3.zero; }
+		m_RigidBody.velocity = new Vector3(v, 0, z);
 	}
 }

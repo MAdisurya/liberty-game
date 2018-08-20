@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterDash : CharacterAbility {
 
-	private bool dashInputVal;
+	private CharacterStates.CharInputStates charInputState;
 	private float m_DashDuration;
 
 	/// <summary>
@@ -19,25 +19,23 @@ public class CharacterDash : CharacterAbility {
 
 	public float dashDuration = 1f;
 
-	void Start()
+	protected override void Start()
 	{
+		base.Start();
+
 		m_DashDuration = dashDuration;
 		dashDuration = 0;
-
-		_rigidBody = GetComponent<Rigidbody>();
 	}
 
 	public override void Ability()
 	{	
-		dashInputVal = Input.GetButtonUp("Dash");
+		base.Ability();
+		charInputState = CharacterStates.CharInputStateManager.CharInputStates;
 
-		if (dashInputVal) 
+		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH) 
 		{ 
 			dashDuration = m_DashDuration;
 		}
-
-		_verticalInput = Input.GetAxis("Vertical");
-		_horizontalInput = Input.GetAxis("Horizontal");
 
 		Dash(_verticalInput, _horizontalInput, dashForce);
 	}
@@ -46,10 +44,10 @@ public class CharacterDash : CharacterAbility {
 	{	
 		if (dashDuration > 0)
 		{
-			float dashX = v * force;
-			float dashZ = z * force * -1;
+			v *= force;
+			z *= force * -1;
 
-			_rigidBody.AddForce(dashX, 0, dashZ, ForceMode.Impulse);
+			_rigidBody.AddForce(v, 0, z, ForceMode.Impulse);
 
 			dashDuration -= Time.deltaTime;
 		}
