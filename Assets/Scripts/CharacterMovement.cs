@@ -10,9 +10,9 @@ public class CharacterMovement : MonoBehaviour {
 	private float verticalInputVal;
 	private float horizontalInputVal;
 
-	private Rigidbody m_RigidBody;
+	protected Rigidbody m_RigidBody;
 
-	public float speed = 2;
+	public float speed = 2f;
 
 	void Start()
 	{
@@ -34,7 +34,7 @@ public class CharacterMovement : MonoBehaviour {
 		float moveX = v * speed;
 		float moveZ = h * speed * -1;
 
-		m_RigidBody.AddForce(moveX, 0, moveZ);
+		m_RigidBody.velocity = new Vector3(moveX, 0, moveZ);
 
 		if (moveX == 0 && moveZ == 0) { m_RigidBody.velocity = Vector3.zero; }
 	}
