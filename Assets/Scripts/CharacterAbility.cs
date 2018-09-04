@@ -10,6 +10,7 @@ public class CharacterAbility : MonoBehaviour {
 	protected Rigidbody _rigidBody;
 	protected float _verticalInput;
 	protected float _horizontalInput;
+	public bool abilityAllowed = true;
 
 	protected virtual void Start()
 	{
@@ -22,7 +23,7 @@ public class CharacterAbility : MonoBehaviour {
 		_verticalInput = Input.GetAxis("Vertical");
 		_horizontalInput = Input.GetAxis("Horizontal");
 
-		Ability();
+		if (abilityAllowed) { Ability(); }
 	}
 
 	public virtual void Ability()

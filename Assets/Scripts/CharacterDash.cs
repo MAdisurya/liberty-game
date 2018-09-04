@@ -10,13 +10,19 @@ public class CharacterDash : CharacterAbility {
 	/// <summary>
 	/// The amount of force the dash has.
 	/// </summary>
+	[Tooltip("The amount of force applied to the dash")]
 	public float dashForce = 10f;
 
 	/// <summary>
 	/// The duration of the cooldown.
 	/// </summary>
+	[Tooltip("The cool down duration after a dash has happened")]
 	public float dashCoolDown = 1f;
 
+	/// <summary>
+	/// The duration of the dash
+	/// </summary>
+	[Tooltip("The duration of how long the dash force will be applied to the character")]
 	public float dashDuration = 1f;
 
 	protected override void Start()
@@ -32,7 +38,7 @@ public class CharacterDash : CharacterAbility {
 		base.Ability();
 		charInputState = CharacterStates.CharInputStateManager.CharInputStates;
 
-		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH) 
+		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH)
 		{ 
 			dashDuration = m_DashDuration;
 		}
