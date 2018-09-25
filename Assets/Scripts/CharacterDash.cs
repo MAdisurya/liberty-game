@@ -6,6 +6,7 @@ public class CharacterDash : CharacterAbility {
 
 	private CharacterStates.CharInputStates charInputState;
 	private float m_DashDuration;
+	private float m_DashCoolDown;
 
 	/// <summary>
 	/// The amount of force the dash has.
@@ -30,7 +31,9 @@ public class CharacterDash : CharacterAbility {
 		base.Start();
 
 		m_DashDuration = dashDuration;
+		m_DashCoolDown = dashCoolDown;
 		dashDuration = 0;
+		dashCoolDown = 0;
 	}
 
 	public override void Ability()
@@ -38,11 +41,14 @@ public class CharacterDash : CharacterAbility {
 		base.Ability();
 		charInputState = CharacterStates.CharInputStateManager.CharInputStates;
 
-		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH)
+		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH &&
+				dashCoolDown <= 0)
 		{ 
 			dashDuration = m_DashDuration;
+			dashCoolDown = m_DashCoolDown;
 		}
 
+		if (dashCoolDown >= 0) dashCoolDown -= Time.deltaTime;
 		Dash(_verticalInput, _horizontalInput, dashForce);
 	}
 
