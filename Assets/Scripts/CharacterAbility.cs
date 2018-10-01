@@ -12,6 +12,8 @@ public class CharacterAbility : MonoBehaviour {
 	protected float _horizontalInput;
 	public bool abilityAllowed = true;
 
+	public Rigidbody CharRigidBody { get { return _rigidBody; } }
+
 	protected virtual void Start()
 	{
 		_character = GetComponent<Character>();

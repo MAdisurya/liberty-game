@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\CharacterAbility.cs" />
+     <Compile Include="Assets\Scripts\CharacterAttack.cs" />
      <Compile Include="Assets\Scripts\CharacterDash.cs" />
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\CharInputStateManager.cs" />
@@ -60,6 +61,8 @@
      <Compile Include="Assets\Scripts\Helpers\Singleton.cs" />
      <Compile Include="Assets\Scripts\Managers\EMJStateManager.cs" />
      <Compile Include="Assets\Scripts\Managers\StateManager.cs" />
+     <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/apps/unity/2017.2.0f3/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
