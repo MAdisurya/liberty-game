@@ -4,51 +4,101 @@ using UnityEngine;
 
 public class MeleeWeapon : Weapon {
 
-	private BoxCollider _boxCollider;
-	private GameObject _attackRegion;
+	private BoxCollider m_BoxCollider;
+	private GameObject m_AttackRegion;
+	private float attackInterval;
+
+	[Header("Melee Attack Region")]
 
 	/// <summary>
 	/// The X size of the attack region of the melee weapon.
 	/// </summary>
 	[Tooltip("The X size of the attack region of the melee weapon")]
-	public float _regionSizeX = 1f;
+	public float m_RegionSizeX = 1f;
 
 	/// <summary>
 	/// The Y size of the attack region of the melee weapon.
 	/// </summary>
 	[Tooltip("The Y size of the attack region of the melee weapon")]
-	public float _regionSizeY = 1f;
+	public float m_RegionSizeY = 1f;
 
 	/// <summary>
 	/// The Z size of the attack region of the melee weapon.
 	/// </summary>
 	[Tooltip("The Z size of the attack region of the melee weapon")]
-	public float _regionSizeZ = 1f;
+	public float m_RegionSizeZ = 1f;
+
+	[Header("Attack")]
+
+	/// <summary>
+	/// The duration the melee attack will last
+	/// </summary>
+	[Tooltip("The duration of the melee attack")]
+	public float m_AttackDuration = 1f;
+
+	/// <summary>
+	/// The interval of which attacks are allowed
+	/// </summary>
+	[Tooltip("The interval of which attacks are allowed")]
+	public float m_AttackInterval = 0.5f;
 
 	protected override void Start()
 	{
 		base.Start();
 
 		CreateMeleeRegion();
+		DisableWeapon();
+	}
+
+	void Update()
+	{
+		if (attackInterval > 0)
+		{
+			attackInterval -= Time.deltaTime;
+		}
 	}
 
 	private void CreateMeleeRegion()
 	{
-		_attackRegion = new GameObject();
-		_boxCollider = (BoxCollider) _attackRegion.AddComponent(typeof(BoxCollider));
+		m_AttackRegion = new GameObject();
+		m_BoxCollider = (BoxCollider) m_AttackRegion.AddComponent(typeof(BoxCollider));
 
-		_attackRegion.name = "Character Weapon";
+		m_AttackRegion.name = "Character Weapon";
 
-		_boxCollider.size = new Vector3(_regionSizeX, _regionSizeY, _regionSizeZ);
-		_boxCollider.center = new Vector3 (1, _weaponParent.transform.position.y, 0);
+		m_BoxCollider.size = new Vector3(m_RegionSizeX, m_RegionSizeY, m_RegionSizeZ);
+		m_BoxCollider.center = new Vector3 (1, _weaponParent.transform.position.y, 0);
 
-		_boxCollider.isTrigger = true;
+		m_BoxCollider.isTrigger = true;
 
-		_attackRegion.transform.SetParent(_weaponParent.transform);
+		m_AttackRegion.transform.SetParent(_weaponParent.transform);
+	}
+
+	public override void EnableWeapon()
+	{
+		m_BoxCollider.enabled = true;
+	}
+
+	public override void DisableWeapon()
+	{
+		m_BoxCollider.enabled = false;
 	}
 
 	public override void UseWeapon()
 	{
+		if (attackInterval <= 0)
+		{
+			StartCoroutine(EnableThenDisableWeapon());
 
+			attackInterval = m_AttackDuration + m_AttackInterval;
+		}
+	}
+
+	private IEnumerator EnableThenDisableWeapon()
+	{
+		EnableWeapon();
+
+		yield return new WaitForSeconds(m_AttackDuration);
+
+		DisableWeapon();
 	}
 }

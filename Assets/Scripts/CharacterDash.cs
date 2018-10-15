@@ -39,7 +39,7 @@ public class CharacterDash : CharacterAbility {
 	public override void Ability()
 	{	
 		base.Ability();
-		charInputState = CharacterStates.CharInputStateManager.CharInputStates;
+		charInputState = CharacterStates.CharInputStateManager.CharInputState;
 
 		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH &&
 				dashCoolDown <= 0)

@@ -10,16 +10,29 @@ namespace CharacterStates {
 		private static CharInputStates _charInputState = CharInputStates.NO_INPUT;
 
 		private bool dashInput;
+		private bool attackInput;
 
-		public static CharInputStates CharInputStates { get { return _charInputState; } }
+		public static CharInputStates CharInputState { get { return _charInputState; } }
 
 		public override void ChangeState()
 		{
 			// Check for inputs
 			dashInput = Input.GetButtonUp("Dash");
+			attackInput = Input.GetButtonUp("Attack");
 
 			// Change charInputStates based on inputs
-			_charInputState = (dashInput) ? CharInputStates.CHAR_DASH : CharInputStates.NO_INPUT;
+			if (dashInput)
+			{
+				_charInputState = CharInputStates.CHAR_DASH;
+			}
+			else if (attackInput)
+			{
+				_charInputState = CharInputStates.CHAR_ATTACK;
+			}
+			else
+			{
+				_charInputState = CharInputStates.NO_INPUT;
+			}
 		}
 	}
 }

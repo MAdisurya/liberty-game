@@ -23,6 +23,16 @@ public class Weapon : MonoBehaviour {
 
 	}
 
+	public virtual void EnableWeapon()
+	{
+
+	}
+
+	public virtual void DisableWeapon()
+	{
+
+	}
+
 	public virtual void UseWeapon()
 	{
 

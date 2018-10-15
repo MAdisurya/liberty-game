@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterAttack : CharacterAbility {
 
+	private CharacterStates.CharInputStates charInputState;
+
 	public Weapon characterWeapon;
 
 	void Awake()
@@ -20,11 +22,18 @@ public class CharacterAttack : CharacterAbility {
 	{
 		if (characterWeapon == null) { return; }
 
-		characterWeapon.UseWeapon();
+		charInputState = CharacterStates.CharInputStateManager.CharInputState;
+
+		if (charInputState == CharacterStates.CharInputStates.CHAR_ATTACK) 
+		{
+			characterWeapon.UseWeapon();
+		}
 	}
 
 	public override void Ability()
 	{
+		base.Ability();
+
 		Attack();
 	}
 }
