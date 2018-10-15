@@ -56,6 +56,8 @@ public class MeleeWeapon : Weapon {
 		{
 			attackInterval -= Time.deltaTime;
 		}
+
+		m_AttackRegion.transform.rotation = _weaponParent.transform.rotation;
 	}
 
 	private void CreateMeleeRegion()

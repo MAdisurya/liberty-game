@@ -4,11 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class CharacterMovement : MonoBehaviour {
-
-	// public CharMoveStateManager charMoveStateManager;
-	private float _verticalInput;
-	private float _horizontalInput;
+public class CharacterMovement : CharacterAbility {
 
 	protected Rigidbody m_RigidBody;
 
@@ -19,12 +15,8 @@ public class CharacterMovement : MonoBehaviour {
 		m_RigidBody = GetComponent<Rigidbody>();
 	}
 
-	void Update()
+	public override void Ability()
 	{
-		// Get Input for vertical and horizontal presses
-		_verticalInput = Input.GetAxis("Vertical");
-		_horizontalInput = Input.GetAxis("Horizontal");
-
 		Move(_verticalInput, _horizontalInput, speed);
 	}
 

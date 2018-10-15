@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace CharacterStates {
-	public enum CharInputStates { CHAR_DASH, CHAR_ATTACK, NO_INPUT }
+	public enum CharInputStates 
+	{ 
+		CHAR_DASH, 
+		CHAR_ATTACK, 
+		NO_INPUT 
+	}
 
 	public class CharInputStateManager : EMJStateManager {
 		
