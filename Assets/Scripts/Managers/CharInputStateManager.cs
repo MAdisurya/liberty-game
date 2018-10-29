@@ -22,8 +22,8 @@ namespace CharacterStates {
 		public override void ChangeState()
 		{
 			// Check for inputs
-			dashInput = Input.GetButtonUp("Dash");
-			attackInput = Input.GetButtonUp("Attack");
+			dashInput = Input.GetButtonDown("Dash");
+			attackInput = Input.GetButtonDown("Attack");
 
 			// Change charInputStates based on inputs
 			if (dashInput)

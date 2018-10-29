@@ -51,16 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\CharacterAbility.cs" />
-     <Compile Include="Assets\Scripts\CharacterAim.cs" />
-     <Compile Include="Assets\Scripts\CharacterAimInput.cs" />
-     <Compile Include="Assets\Scripts\CharacterAttack.cs" />
-     <Compile Include="Assets\Scripts\CharacterDash.cs" />
-     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-     <Compile Include="Assets\Scripts\CharInputStateManager.cs" />
-     <Compile Include="Assets\Scripts\CharMoveStateManager.cs" />
+     <Compile Include="Assets\Scripts\Character\Character.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterAbility.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterAim.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterAimInput.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterAttack.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterDash.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\DamageOnHit.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Helpers\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Managers\CharInputStateManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\CharMoveStateManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EMJStateManager.cs" />
      <Compile Include="Assets\Scripts\Managers\StateManager.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />

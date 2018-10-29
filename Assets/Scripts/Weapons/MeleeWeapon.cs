@@ -6,6 +6,7 @@ public class MeleeWeapon : Weapon {
 
 	private BoxCollider m_BoxCollider;
 	private GameObject m_AttackRegion;
+	private Weapon m_Weapon;
 	private float attackInterval;
 
 	[Header("Melee Attack Region")]
@@ -64,13 +65,17 @@ public class MeleeWeapon : Weapon {
 	{
 		m_AttackRegion = new GameObject();
 		m_BoxCollider = (BoxCollider) m_AttackRegion.AddComponent(typeof(BoxCollider));
+		m_Weapon = (Weapon) m_AttackRegion.AddComponent(typeof(Weapon));
 
 		m_AttackRegion.name = "Character Weapon";
+		m_AttackRegion.tag = "Weapon";
 
 		m_BoxCollider.size = new Vector3(m_RegionSizeX, m_RegionSizeY, m_RegionSizeZ);
 		m_BoxCollider.center = new Vector3 (1, _weaponParent.transform.position.y, 0);
 
 		m_BoxCollider.isTrigger = true;
+
+		m_Weapon.m_Damage = m_Damage;
 
 		m_AttackRegion.transform.SetParent(_weaponParent.transform);
 	}

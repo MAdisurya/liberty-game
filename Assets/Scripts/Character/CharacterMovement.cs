@@ -6,18 +6,14 @@ using UnityEngine;
 
 public class CharacterMovement : CharacterAbility {
 
-	protected Rigidbody m_RigidBody;
-
 	public float speed = 2f;
-
-	void Start()
-	{
-		m_RigidBody = GetComponent<Rigidbody>();
-	}
 
 	public override void Ability()
 	{
-		Move(_verticalInput, _horizontalInput, speed);
+		if (_character.m_CharacterType == CharacterType.PLAYER)
+		{
+			Move(_verticalInput, _horizontalInput, speed);
+		}
 	}
 
 	// Method that handles the moving of the character
@@ -26,6 +22,6 @@ public class CharacterMovement : CharacterAbility {
 		v *= speed;
 		z *= speed * -1;
 
-		m_RigidBody.velocity = new Vector3(v, 0, z);
+		_rigidBody.velocity = new Vector3(v, 0, z);
 	}
 }

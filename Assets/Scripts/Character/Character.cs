@@ -12,6 +12,8 @@ public enum CharacterType
 [RequireComponent(typeof(CharacterAim))]
 [RequireComponent(typeof(CharacterDash))]
 [RequireComponent(typeof(CharacterAttack))]
+[RequireComponent(typeof(DamageOnHit))]
+[RequireComponent(typeof(Health))]
 [RequireComponent(typeof(Rigidbody))]
 
 public class Character : MonoBehaviour {

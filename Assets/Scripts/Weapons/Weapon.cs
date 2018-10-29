@@ -6,7 +6,11 @@ public class Weapon : MonoBehaviour {
 
 	protected GameObject _weaponParent;
 
-	protected float _damage;
+	/// <summary>
+	/// The damage of the weapon
+	/// </summary>
+	[Tooltip("The weapon damage.")]
+	public int m_Damage;
 
 	public GameObject WeaponParent {
 		get { return _weaponParent; }
