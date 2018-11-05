@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 442}
   m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 132
+  controlID: 34
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 75
+  controlID: 35
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 36
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -349,8 +349,8 @@ MonoBehaviour:
     y: 0
     width: 984
     height: 493
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -421,19 +421,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Character
+    - Assets/Scripts/Weapons
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Character
+  - Assets/Scripts/Weapons
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Users\mario.adi8385\Documents\libertygame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42280000
-    m_LastClickedID: 10306
-    m_ExpandedIDs: 00000000e42700003228000000ca9a3bffffff7f
+    m_SelectedIDs: c2270000
+    m_LastClickedID: 10178
+    m_ExpandedIDs: 0000000060270000b627000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -461,7 +461,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e427000032280000
+    m_ExpandedIDs: 0000000060270000b6270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,23 +577,23 @@ MonoBehaviour:
     height: 472
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: e8faffffeafaffff0000000088280000
+    m_SelectedIDs: ca9cffff
+    m_LastClickedID: -25398
+    m_ExpandedIDs: a4fbffffa6fbffff0000000026280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Enemy_Dummy
+      m_OriginalName: Enemy_Dummy
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -1116
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -634,9 +634,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.17460796, y: 0.19611132, z: -1.7224965}
+    m_Target: {x: 0.15756792, y: -0.059923172, z: 1.5804448}
     speed: 2
-    m_Value: {x: 0.17460796, y: 0.19611132, z: -1.7224965}
+    m_Value: {x: 0.15756792, y: -0.059923172, z: 1.5804448}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -659,13 +659,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0020828585, y: 0.9945639, z: -0.10211066, w: 0.020285299}
+    m_Target: {x: -0.00040207038, y: 0.74862516, z: -0.66299343, w: -0.0004542566}
     speed: 2
-    m_Value: {x: 0.0020828585, y: 0.9945639, z: -0.10211066, w: 0.020285299}
+    m_Value: {x: -0.00040207032, y: 0.7486251, z: -0.6629934, w: -0.00045425654}
   m_Size:
-    m_Target: 8.900595
+    m_Target: 16.942623
     speed: 2
-    m_Value: 8.900595
+    m_Value: 16.942623
   m_Ortho:
     m_Target: 0
     speed: 2

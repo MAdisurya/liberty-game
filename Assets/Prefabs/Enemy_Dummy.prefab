@@ -32,7 +32,7 @@ GameObject:
   - component: {fileID: 114142357205878862}
   m_Layer: 0
   m_Name: Enemy_Dummy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1771654358898280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.97, y: 0.84, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 6.03, y: 0.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Health: 5
+  m_MaxHealth: 5
 --- !u!114 &114227534134962498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87a4517e68a0f1f45b55ab8f53f40698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityAllowed: 0
+  abilityAllowed: 1
   characterWeapon: {fileID: 0}
 --- !u!114 &114871693350538938
 MonoBehaviour:

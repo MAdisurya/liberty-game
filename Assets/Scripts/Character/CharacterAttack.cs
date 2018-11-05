@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterAttack : CharacterAbility {
 
 	private CharacterStates.CharInputStates charInputState;
-
+	
 	public Weapon characterWeapon;
 
 	void Awake()

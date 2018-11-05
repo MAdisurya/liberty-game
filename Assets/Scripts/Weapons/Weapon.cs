@@ -5,6 +5,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 
 	protected GameObject _weaponParent;
+	protected GameObject m_WeaponObject;
+	protected Rigidbody _rigidBody;
 
 	/// <summary>
 	/// The damage of the weapon
@@ -19,7 +21,12 @@ public class Weapon : MonoBehaviour {
 
 	protected virtual void Start()
 	{
+		m_WeaponObject = new GameObject();
 
+		// Add Rigidbody component to the new weapon object.
+		_rigidBody = (Rigidbody) m_WeaponObject.AddComponent<Rigidbody>();
+		// Set rigid body to kinematic to avoid collisions with other weapons
+		_rigidBody.isKinematic = true;
 	}
 
 	void Update()

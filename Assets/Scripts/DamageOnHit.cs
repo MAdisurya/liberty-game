@@ -25,6 +25,7 @@ public class DamageOnHit : MonoBehaviour {
 	private void OnTriggerEnter(Collider other)
 	{
 		if (characterHealth == null) { return; }
+		if (!m_DamageAllowed) { return; }
 
 		// Check if the colliding object is a weapon
 		if (other.gameObject.tag == "Weapon")
@@ -36,11 +37,12 @@ public class DamageOnHit : MonoBehaviour {
 
 			if (weapon == null) { return; }
 
-			// Check if the colliding object is a player weapon
+			// Check if the colliding object is not this object type
 			if (weaponParent.gameObject.tag != gameObject.tag)
 			{
 				characterHealth.SubtractHealth(weapon.m_Damage);
-				Debug.Log(characterHealth.m_Health);
+				Debug.Log("Collision with: " + weaponParent.gameObject.tag + " and " + gameObject.tag);
+				Debug.Log(gameObject.tag + ": " + characterHealth.m_Health);
 			}
 		}
 	}

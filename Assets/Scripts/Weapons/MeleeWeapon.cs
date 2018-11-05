@@ -5,7 +5,6 @@ using UnityEngine;
 public class MeleeWeapon : Weapon {
 
 	private BoxCollider m_BoxCollider;
-	private GameObject m_AttackRegion;
 	private Weapon m_Weapon;
 	private float attackInterval;
 
@@ -58,26 +57,26 @@ public class MeleeWeapon : Weapon {
 			attackInterval -= Time.deltaTime;
 		}
 
-		m_AttackRegion.transform.rotation = _weaponParent.transform.rotation;
+		m_WeaponObject.transform.rotation = _weaponParent.transform.rotation;
 	}
 
 	private void CreateMeleeRegion()
 	{
-		m_AttackRegion = new GameObject();
-		m_BoxCollider = (BoxCollider) m_AttackRegion.AddComponent(typeof(BoxCollider));
-		m_Weapon = (Weapon) m_AttackRegion.AddComponent(typeof(Weapon));
+		m_BoxCollider = (BoxCollider) m_WeaponObject.AddComponent<BoxCollider>();
+		m_Weapon = (Weapon) m_WeaponObject.AddComponent<Weapon>();
 
-		m_AttackRegion.name = "Character Weapon";
-		m_AttackRegion.tag = "Weapon";
+		m_WeaponObject.name = "Character Weapon";
+		m_WeaponObject.tag = "Weapon";
 
 		m_BoxCollider.size = new Vector3(m_RegionSizeX, m_RegionSizeY, m_RegionSizeZ);
 		m_BoxCollider.center = new Vector3 (1, _weaponParent.transform.position.y, 0);
 
 		m_BoxCollider.isTrigger = true;
 
-		m_Weapon.m_Damage = m_Damage;
+		m_WeaponObject.transform.SetParent(_weaponParent.transform);
+		m_WeaponObject.transform.position = new Vector3(_weaponParent.transform.position.x, 0, 0);
 
-		m_AttackRegion.transform.SetParent(_weaponParent.transform);
+		m_Weapon.m_Damage = m_Damage;
 	}
 
 	public override void EnableWeapon()
