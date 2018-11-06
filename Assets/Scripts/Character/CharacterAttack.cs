@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CharacterAttack : CharacterAbility {
 
-	private CharacterStates.CharInputStates charInputState;
-	
+	private EMJCharacterStates.CharInputStates charInputState;
+
 	public Weapon characterWeapon;
 
 	void Awake()
@@ -22,9 +22,9 @@ public class CharacterAttack : CharacterAbility {
 	{
 		if (characterWeapon == null) { return; }
 
-		charInputState = CharacterStates.CharInputStateManager.CharInputState;
+		charInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
-		if (charInputState == CharacterStates.CharInputStates.CHAR_ATTACK) 
+		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_ATTACK) 
 		{
 			characterWeapon.UseWeapon();
 		}

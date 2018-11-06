@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Character\CharacterAttack.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterDash.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterStateMachine.cs" />
      <Compile Include="Assets\Scripts\DamageOnHit.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\Helpers\Singleton.cs" />

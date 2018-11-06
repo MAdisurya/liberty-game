@@ -50,14 +50,14 @@ public class MeleeWeapon : Weapon {
 		DisableWeapon();
 	}
 
-	void Update()
+	protected override void Update()
 	{
+		base.Update();
+
 		if (attackInterval > 0)
 		{
 			attackInterval -= Time.deltaTime;
 		}
-
-		m_WeaponObject.transform.rotation = _weaponParent.transform.rotation;
 	}
 
 	private void CreateMeleeRegion()

@@ -5,6 +5,8 @@ using UnityEngine.Assertions;
 
 public class DamageOnHit : MonoBehaviour {
 
+	private Character m_Character;
+
 	/// <summary>
 	/// The health object of this character
 	/// </summary>
@@ -20,6 +22,11 @@ public class DamageOnHit : MonoBehaviour {
 	void Awake()
 	{
 		Assert.IsNotNull(characterHealth);
+	}
+
+	void Start()
+	{
+		m_Character = GetComponent<Character>();
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -41,8 +48,12 @@ public class DamageOnHit : MonoBehaviour {
 			if (weaponParent.gameObject.tag != gameObject.tag)
 			{
 				characterHealth.SubtractHealth(weapon.m_Damage);
-				Debug.Log("Collision with: " + weaponParent.gameObject.tag + " and " + gameObject.tag);
 				Debug.Log(gameObject.tag + ": " + characterHealth.m_Health);
+
+				if (characterHealth.m_Health <= 0)
+				{
+					m_Character.Die();
+				}
 			}
 		}
 	}

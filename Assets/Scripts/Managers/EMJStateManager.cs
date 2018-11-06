@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CharacterStates {
+namespace EMJCharacterStates {
 	public class EMJStateManager : MonoBehaviour {
 
 		// Override this for whenever you want to change state for an object

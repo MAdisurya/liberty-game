@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace CharacterStates {
+namespace EMJCharacterStates {
 	public class StateManager : Singleton<StateManager> {
 
 		public List<EMJStateManager> _stateManagers;

@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour {
 	protected GameObject _weaponParent;
 	protected GameObject m_WeaponObject;
 	protected Rigidbody _rigidBody;
+	protected EMJCharacterStates.CharacterStateMachine m_CharacterStateMachine;
 
 	/// <summary>
 	/// The damage of the weapon
@@ -21,6 +22,8 @@ public class Weapon : MonoBehaviour {
 
 	protected virtual void Start()
 	{
+		m_CharacterStateMachine = GetComponent<EMJCharacterStates.CharacterStateMachine>();
+
 		m_WeaponObject = new GameObject();
 
 		// Add Rigidbody component to the new weapon object.
@@ -29,9 +32,16 @@ public class Weapon : MonoBehaviour {
 		_rigidBody.isKinematic = true;
 	}
 
-	void Update()
+	protected virtual void Update()
 	{
+		if (m_CharacterStateMachine == null) { return; }
 
+		EMJCharacterStates.CharacterStates currentCharState = m_CharacterStateMachine.CurrentCharacterState;
+
+		if (currentCharState != EMJCharacterStates.CharacterStates.DEAD)
+		{
+			m_WeaponObject.transform.rotation = _weaponParent.transform.rotation;
+		}
 	}
 
 	public virtual void EnableWeapon()

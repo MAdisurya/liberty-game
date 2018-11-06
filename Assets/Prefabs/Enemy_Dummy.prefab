@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114434369103293896}
   - component: {fileID: 114871693350538938}
   - component: {fileID: 114138237864017640}
+  - component: {fileID: 114037583394139946}
   - component: {fileID: 114463694130332924}
   - component: {fileID: 114142357205878862}
   m_Layer: 0
@@ -44,7 +45,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1771654358898280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.03, y: 0.84, z: 0}
+  m_LocalPosition: {x: 3.36, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,6 +107,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114037583394139946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771654358898280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcf2ae9bf6eff54992e6ecc5a2cf4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114138237864017640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CharacterType: 1
+  m_CharacterStateMachine: {fileID: 114037583394139946}
 --- !u!114 &114142357205878862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,8 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a02562342b1b3c43992cb2771d3d87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Health: 5
-  m_MaxHealth: 5
+  m_Health: 3
+  m_MaxHealth: 3
 --- !u!114 &114227534134962498
 MonoBehaviour:
   m_ObjectHideFlags: 1

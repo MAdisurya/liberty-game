@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CharacterStates {
+namespace EMJCharacterStates {
 	public enum CharInputStates 
 	{ 
 		CHAR_DASH, 

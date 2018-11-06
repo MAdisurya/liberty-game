@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterDash : CharacterAbility {
 
-	private CharacterStates.CharInputStates charInputState;
+	private EMJCharacterStates.CharInputStates charInputState;
 	private float m_DashDuration;
 	private float m_DashCoolDown;
 
@@ -39,9 +39,9 @@ public class CharacterDash : CharacterAbility {
 	public override void Ability()
 	{	
 		base.Ability();
-		charInputState = CharacterStates.CharInputStateManager.CharInputState;
+		charInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
-		if (charInputState == CharacterStates.CharInputStates.CHAR_DASH &&
+		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_DASH &&
 				dashCoolDown <= 0)
 		{ 
 			dashDuration = m_DashDuration;

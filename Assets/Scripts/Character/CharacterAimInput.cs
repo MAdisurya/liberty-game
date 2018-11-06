@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterAimInput : MonoBehaviour {
 
-	private CharacterStates.CharInputStates m_CharInputState;
+	private EMJCharacterStates.CharInputStates m_CharInputState;
 
 	public CharacterAim m_CharacterAim;
 
@@ -26,10 +26,10 @@ public class CharacterAimInput : MonoBehaviour {
 		Quaternion rotationTarget = Quaternion.Euler(0, -(angle + 45), 0);
 
 		// Get current state of character
-		m_CharInputState = CharacterStates.CharInputStateManager.CharInputState;
+		m_CharInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
 		// Only rotate the character if there is no input
-		if (m_CharInputState == CharacterStates.CharInputStates.NO_INPUT)
+		if (m_CharInputState == EMJCharacterStates.CharInputStates.NO_INPUT)
 		{
 			m_CharacterAim.Rotate(rotationTarget);
 		}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CharacterStates {
+namespace EMJCharacterStates {
 	public enum CharMoveStates { 	CHAR_LEFT, CHAR_RIGHT, CHAR_UP, CHAR_DOWN,
 									CHAR_UP_LEFT, CHAR_UP_RIGHT, CHAR_DOWN_LEFT, CHAR_DOWN_RIGHT,
 									CHAR_IDLE }
