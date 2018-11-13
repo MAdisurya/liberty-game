@@ -15,18 +15,27 @@ public class CharacterAttack : CharacterAbility {
 		characterWeapon.WeaponParent = this.gameObject;
 	}
 
+	protected override void Start()
+	{
+		base.Start();
+	}
+
 	/// <summary>
 	/// Called when character is attacking
 	/// </summary>
 	void Attack()
 	{
 		if (characterWeapon == null) { return; }
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DASHING) { return; }
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING) { return; }
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DEAD) { return; }
 
 		charInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
-		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_ATTACK) 
+		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_ATTACK)
 		{
 			characterWeapon.UseWeapon();
+			StartCoroutine(EnableThenDisableState(EMJCharacterStates.CharacterStates.ATTACKING, characterWeapon.m_AttackInterval));
 		}
 	}
 

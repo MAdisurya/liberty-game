@@ -192,6 +192,12 @@ Transform:
   m_Father: {fileID: 1809710581}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &337654991 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114037583394139946, guid: 39170da4d4717104cab4b24fee0fe99a,
+    type: 2}
+  m_PrefabInternal: {fileID: 992856500}
+  m_Script: {fileID: 11500000, guid: 0bcf2ae9bf6eff54992e6ecc5a2cf4e3, type: 3}
 --- !u!1001 &992856500
 Prefab:
   m_ObjectHideFlags: 0
@@ -231,16 +237,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114434369103293896, guid: 39170da4d4717104cab4b24fee0fe99a,
-        type: 2}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 1694291916}
     - target: {fileID: 114631237470252590, guid: 39170da4d4717104cab4b24fee0fe99a,
         type: 2}
       propertyPath: characterWeapon
       value: 
       objectReference: {fileID: 2093637236}
+    - target: {fileID: 114434369103293896, guid: 39170da4d4717104cab4b24fee0fe99a,
+        type: 2}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 1694291916}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39170da4d4717104cab4b24fee0fe99a, type: 2}
   m_IsPrefabParent: 0
@@ -345,8 +351,7 @@ Prefab:
       propertyPath: characterWeapon
       value: 
       objectReference: {fileID: 1500891244}
-    m_RemovedComponents:
-    - {fileID: 114706124571741904, guid: 5f44e7519986e6c4b8f40eca2a4f1e05, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f44e7519986e6c4b8f40eca2a4f1e05, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1500891242
@@ -359,7 +364,7 @@ GameObject:
   - component: {fileID: 1500891243}
   - component: {fileID: 1500891244}
   m_Layer: 0
-  m_Name: MeleeWeapon
+  m_Name: PlayerMeleeWeapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,12 +394,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d1c8c781697204881667472129aeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CharacterStateMachine: {fileID: 1694291923}
   m_Damage: 1
+  m_AttackInterval: 0.5
   m_RegionSizeX: 1
   m_RegionSizeY: 1
   m_RegionSizeZ: 1
-  m_AttackDuration: 0.5
-  m_AttackInterval: 0.5
+  m_AttackDuration: 0.25
 --- !u!1001 &1547273947
 Prefab:
   m_ObjectHideFlags: 0
@@ -442,6 +448,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1062646647608196, guid: 5f44e7519986e6c4b8f40eca2a4f1e05,
     type: 2}
   m_PrefabInternal: {fileID: 1283890621}
+--- !u!114 &1694291923 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114350017269335454, guid: 5f44e7519986e6c4b8f40eca2a4f1e05,
+    type: 2}
+  m_PrefabInternal: {fileID: 1283890621}
+  m_Script: {fileID: 11500000, guid: 0bcf2ae9bf6eff54992e6ecc5a2cf4e3, type: 3}
 --- !u!1 &1809710580
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,12 +575,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d1c8c781697204881667472129aeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CharacterStateMachine: {fileID: 337654991}
   m_Damage: 1
+  m_AttackInterval: 0.5
   m_RegionSizeX: 1
   m_RegionSizeY: 1
   m_RegionSizeZ: 1
-  m_AttackDuration: 0.5
-  m_AttackInterval: 0.5
+  m_AttackDuration: 0.25
 --- !u!4 &2093637237
 Transform:
   m_ObjectHideFlags: 0

@@ -13,7 +13,6 @@ namespace EMJCharacterStates {
 	public class CharInputStateManager : EMJStateManager {
 		
 		private static CharInputStates _charInputState = CharInputStates.NO_INPUT;
-
 		private bool dashInput;
 		private bool attackInput;
 

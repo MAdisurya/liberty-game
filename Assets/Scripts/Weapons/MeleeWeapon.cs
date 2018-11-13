@@ -6,7 +6,6 @@ public class MeleeWeapon : Weapon {
 
 	private BoxCollider m_BoxCollider;
 	private Weapon m_Weapon;
-	private float attackInterval;
 
 	[Header("Melee Attack Region")]
 
@@ -36,28 +35,12 @@ public class MeleeWeapon : Weapon {
 	[Tooltip("The duration of the melee attack")]
 	public float m_AttackDuration = 1f;
 
-	/// <summary>
-	/// The interval of which attacks are allowed
-	/// </summary>
-	[Tooltip("The interval of which attacks are allowed")]
-	public float m_AttackInterval = 0.5f;
-
 	protected override void Start()
 	{
 		base.Start();
 
 		CreateMeleeRegion();
 		DisableWeapon();
-	}
-
-	protected override void Update()
-	{
-		base.Update();
-
-		if (attackInterval > 0)
-		{
-			attackInterval -= Time.deltaTime;
-		}
 	}
 
 	private void CreateMeleeRegion()
@@ -81,22 +64,27 @@ public class MeleeWeapon : Weapon {
 
 	public override void EnableWeapon()
 	{
+		base.EnableWeapon();
 		m_BoxCollider.enabled = true;
 	}
 
 	public override void DisableWeapon()
 	{
+		base.DisableWeapon();
 		m_BoxCollider.enabled = false;
 	}
 
 	public override void UseWeapon()
 	{
+		base.UseWeapon();
+
 		if (attackInterval <= 0)
 		{
 			StartCoroutine(EnableThenDisableWeapon());
 
-			attackInterval = m_AttackDuration + m_AttackInterval;
+			attackInterval = m_AttackInterval;
 		}
+
 	}
 
 	private IEnumerator EnableThenDisableWeapon()

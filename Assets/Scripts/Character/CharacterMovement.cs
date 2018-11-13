@@ -10,6 +10,8 @@ public class CharacterMovement : CharacterAbility {
 
 	public override void Ability()
 	{
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING) { return; }
+
 		if (_character.m_CharacterType == CharacterType.PLAYER)
 		{
 			Move(_verticalInput, _horizontalInput, speed);

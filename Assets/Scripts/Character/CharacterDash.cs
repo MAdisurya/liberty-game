@@ -39,6 +39,8 @@ public class CharacterDash : CharacterAbility {
 	public override void Ability()
 	{	
 		base.Ability();
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DEAD) { return; }
+
 		charInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
 		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_DASH &&
@@ -46,6 +48,7 @@ public class CharacterDash : CharacterAbility {
 		{ 
 			dashDuration = m_DashDuration;
 			dashCoolDown = m_DashCoolDown;
+			StartCoroutine(EnableThenDisableState(EMJCharacterStates.CharacterStates.DASHING, m_DashDuration));
 		}
 
 		if (dashCoolDown >= 0) dashCoolDown -= Time.deltaTime;

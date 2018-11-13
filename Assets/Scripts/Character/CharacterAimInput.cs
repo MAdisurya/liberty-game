@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterAimInput : MonoBehaviour {
-
-	private EMJCharacterStates.CharInputStates m_CharInputState;
+public class CharacterAimInput : CharacterAbility {
 
 	public CharacterAim m_CharacterAim;
-
-	void Update()
+	public override void Ability()
 	{
 		if (m_CharacterAim == null) { return; }
 
@@ -25,11 +22,8 @@ public class CharacterAimInput : MonoBehaviour {
 		// Set rotation
 		Quaternion rotationTarget = Quaternion.Euler(0, -(angle + 45), 0);
 
-		// Get current state of character
-		m_CharInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
-
-		// Only rotate the character if there is no input
-		if (m_CharInputState == EMJCharacterStates.CharInputStates.NO_INPUT)
+		// Only rotate the character if not attacking
+		if (_charStateMachine.GetCharacterState != EMJCharacterStates.CharacterStates.ATTACKING)
 		{
 			m_CharacterAim.Rotate(rotationTarget);
 		}

@@ -12,15 +12,17 @@ namespace EMJCharacterStates
 		DEAD
 	}
 
+	[RequireComponent(typeof(Character))]
+
 	public class CharacterStateMachine : MonoBehaviour {
 
 		private CharacterStates _currentCharacterState = CharacterStates.IDLE;
-
-		public CharacterStates CurrentCharacterState { get { return _currentCharacterState; } }
-
-		public void SetState(CharacterStates state)
+		private CharInputStates charInputState;
+		public CharacterStates GetCharacterState { get { return _currentCharacterState; } }
+		
+		public void SetState(CharacterStates _State)
 		{
-			_currentCharacterState = state;
+			_currentCharacterState = _State;
 		}
 	}
 }
