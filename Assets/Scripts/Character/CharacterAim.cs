@@ -25,7 +25,7 @@ public class CharacterAim : CharacterAbility {
 		float angle = AngleBetweenTwoPoints(positionOnScreen, targetPos);
 
 		// Set rotation target
-		Quaternion rotationTarget = Quaternion.Euler(0, -(angle - 45), 0);
+		Quaternion rotationTarget = Quaternion.Euler(0, -(angle - 50), 0);
 
 		// Dampen Character towards rotation target
 		transform.rotation = Quaternion.Slerp(transform.rotation,

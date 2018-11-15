@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114037583394139946}
   - component: {fileID: 114463694130332924}
   - component: {fileID: 114142357205878862}
+  - component: {fileID: 114011048711405140}
   m_Layer: 0
   m_Name: Enemy_Dummy
   m_TagString: Enemy
@@ -107,6 +108,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &114011048711405140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771654358898280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44413227c5485134fb2ac5903018fa47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CharacterMovement: {fileID: 114871693350538938}
+  m_Player: {fileID: 0}
+  m_AllowedDistance: 2
 --- !u!114 &114037583394139946
 MonoBehaviour:
   m_ObjectHideFlags: 1

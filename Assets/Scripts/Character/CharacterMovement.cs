@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Character))]
 
 public class CharacterMovement : CharacterAbility {
 	public float speed = 2f;

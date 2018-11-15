@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Character))]
-
 public class CharacterAbility : MonoBehaviour {
 
 	protected Character _character;

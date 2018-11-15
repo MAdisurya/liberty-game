@@ -12,8 +12,6 @@ namespace EMJCharacterStates
 		DEAD
 	}
 
-	[RequireComponent(typeof(Character))]
-
 	public class CharacterStateMachine : MonoBehaviour {
 
 		private CharacterStates _currentCharacterState = CharacterStates.IDLE;
