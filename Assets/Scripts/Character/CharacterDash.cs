@@ -62,9 +62,14 @@ public class CharacterDash : CharacterAbility {
 			float _x = force * (transform.forward.x * v + transform.right.x * h);
 			float _z = force * (transform.forward.z * v + transform.right.z * h);
 
+			_collider.enabled = false;
 			_rigidBody.AddForce(_x, 0, _z, ForceMode.Impulse);
 
 			dashDuration -= Time.deltaTime;
+		}
+		else
+		{
+			_collider.enabled = true;
 		}
 	}
 }

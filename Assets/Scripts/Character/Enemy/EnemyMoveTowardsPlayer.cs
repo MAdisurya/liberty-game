@@ -42,6 +42,7 @@ public class EnemyMoveTowardsPlayer : EnemyBehaviour {
 		if (distance > m_AllowedDistance)
 		{
 			transform.position = Vector3.MoveTowards(transform.position, m_Player.position, step);
+			_charStateMachine.SetState(EMJCharacterStates.CharacterStates.MOVING);
 		}
 	}
 }

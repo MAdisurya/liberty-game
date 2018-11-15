@@ -7,6 +7,7 @@ namespace EMJCharacterStates
 	public enum CharacterStates
 	{
 		IDLE,
+		MOVING,
 		ATTACKING,
 		DASHING,
 		DEAD

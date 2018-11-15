@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1E423739-4E91-D0D5-1F0E-FC1C24102B21}</ProjectGuid>
+    <ProjectGuid>{6D1301B6-3294-3064-8AD8-9B93D649370C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Character\CharacterAbility.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterAim.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterAimInput.cs" />
+     <Compile Include="Assets\Scripts\Character\CharacterAnimState.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterAttack.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterDash.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
@@ -98,10 +99,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/Mario/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+ <HintPath>D:/Users/mario.adi8385/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/Mario/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>D:/Users/mario.adi8385/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

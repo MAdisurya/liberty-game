@@ -10,6 +10,7 @@ public enum CharacterType
 }
 
 [RequireComponent(typeof(EMJCharacterStates.CharacterStateMachine))]
+[RequireComponent(typeof(EMJCharacterStates.CharacterAnimState))]
 [RequireComponent(typeof(CharacterMovement))]
 [RequireComponent(typeof(CharacterAim))]
 [RequireComponent(typeof(CharacterDash))]

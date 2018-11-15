@@ -12,7 +12,7 @@ public class CharacterMovement : CharacterAbility {
 		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING) { return; }
 
 		if (_character.m_CharacterType == CharacterType.PLAYER)
-		{
+		{			
 			Move(_verticalInput, _horizontalInput, speed);
 		}
 	}
@@ -22,6 +22,21 @@ public class CharacterMovement : CharacterAbility {
 	{
 		Vector3 _v = transform.forward * v;
 		Vector3 _h = transform.right * h;
+
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.IDLE)
+		{
+			if (v != 0 || h != 0)
+			{
+				_charStateMachine.SetState(EMJCharacterStates.CharacterStates.MOVING);
+			}
+		}
+		else if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.MOVING)
+		{
+			if (v == 0 && h == 0)
+			{
+				_charStateMachine.SetState(EMJCharacterStates.CharacterStates.IDLE);
+			}
+		}
 
 		_rigidBody.velocity = (_v + _h) * speed;
 	}

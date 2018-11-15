@@ -6,6 +6,7 @@ public class CharacterAbility : MonoBehaviour {
 
 	protected Character _character;
 	protected Rigidbody _rigidBody;
+	protected Collider _collider;
 	protected EMJCharacterStates.CharacterStateMachine _charStateMachine;
 	protected float _verticalInput;
 	protected float _horizontalInput;
@@ -17,6 +18,7 @@ public class CharacterAbility : MonoBehaviour {
 	{
 		_character = GetComponent<Character>();
 		_rigidBody = GetComponent<Rigidbody>();
+		_collider = GetComponent<Collider>();
 		_charStateMachine = GetComponent<EMJCharacterStates.CharacterStateMachine>();
 	}
 
