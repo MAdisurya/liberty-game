@@ -20,7 +20,7 @@ public class CharacterAimInput : CharacterAbility {
 		float angle = m_CharacterAim.AngleBetweenTwoPoints(positionOnScreen, lookPos);
 
 		// Set rotation
-		Quaternion rotationTarget = Quaternion.Euler(0, -(angle + 45), 0);
+		Quaternion rotationTarget = Quaternion.Euler(0, -(angle - 50), 0);
 
 		// Only rotate the character if not attacking
 		if (_charStateMachine.GetCharacterState != EMJCharacterStates.CharacterStates.ATTACKING)

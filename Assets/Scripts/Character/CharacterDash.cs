@@ -55,14 +55,14 @@ public class CharacterDash : CharacterAbility {
 		Dash(_verticalInput, _horizontalInput, dashForce);
 	}
 
-	void Dash(float v, float z, float force)
+	void Dash(float v, float h, float force)
 	{	
 		if (dashDuration > 0)
 		{
-			v *= force;
-			z *= force * -1;
+			float _x = force * (transform.forward.x * v + transform.right.x * h);
+			float _z = force * (transform.forward.z * v + transform.right.z * h);
 
-			_rigidBody.AddForce(v, 0, z, ForceMode.Impulse);
+			_rigidBody.AddForce(_x, 0, _z, ForceMode.Impulse);
 
 			dashDuration -= Time.deltaTime;
 		}

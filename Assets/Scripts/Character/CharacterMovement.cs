@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Character))]
 
 public class CharacterMovement : CharacterAbility {
-
 	public float speed = 2f;
 
 	public override void Ability()
@@ -19,11 +19,11 @@ public class CharacterMovement : CharacterAbility {
 	}
 
 	// Method that handles the moving of the character
-	void Move(float v, float z, float speed)
+	void Move(float v, float h, float speed)
 	{
-		v *= speed;
-		z *= speed * -1;
+		Vector3 _v = transform.forward * v;
+		Vector3 _h = transform.right * h;
 
-		_rigidBody.velocity = new Vector3(v, 0, z);
+		_rigidBody.velocity = (_v + _h) * speed;
 	}
 }

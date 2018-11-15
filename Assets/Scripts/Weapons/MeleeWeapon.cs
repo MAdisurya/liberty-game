@@ -52,7 +52,7 @@ public class MeleeWeapon : Weapon {
 		m_WeaponObject.tag = "Weapon";
 
 		m_BoxCollider.size = new Vector3(m_RegionSizeX, m_RegionSizeY, m_RegionSizeZ);
-		m_BoxCollider.center = new Vector3 (1, _weaponParent.transform.position.y, 0);
+		m_BoxCollider.center = new Vector3 (0, _weaponParent.transform.position.y, 1);
 
 		m_BoxCollider.isTrigger = true;
 
