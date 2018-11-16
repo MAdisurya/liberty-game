@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 442}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 11532
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 1
-  controlID: 12
+  controlID: 11651
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 50
+  controlID: 11652
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 13
+  controlID: 11604
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 342}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 151
+  controlID: 11533
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -462,14 +462,14 @@ MonoBehaviour:
     width: 982
     height: 533
   m_SceneLighting: 1
-  lastFramingTime: 4192.45024331357
+  lastFramingTime: 8236.567493163197
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.047351003, y: -0.06082037, z: 2.4502473}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0.047351003, y: -0.06082037, z: 2.4502473}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -492,13 +492,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.14111488, y: 0.856443, z: -0.38432512, w: 0.31446508}
+    m_Target: {x: -0.22483978, y: 0.017232334, z: -0.0039910134, w: -0.9742509}
     speed: 2
-    m_Value: {x: 0.14111473, y: 0.8564421, z: -0.3843247, w: 0.31446475}
+    m_Value: {x: -0.22483978, y: 0.017232332, z: -0.0039910134, w: -0.97425085}
   m_Size:
-    m_Target: 19.046772
+    m_Target: 22
     speed: 2
-    m_Value: 19.046772
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -542,7 +542,7 @@ MonoBehaviour:
     - {fileID: 1107931209535091456, guid: 01b781b01a75e1349a60169c78f29e00, type: 2}
     m_ValueSerializationHelper:
     - {x: 404.40002, y: 188.80005}
-    - {x: 392.40002, y: 188.80005}
+    - {x: 404.40002, y: 128.80005}
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 0}
   m_BreadCrumbs: []
@@ -610,9 +610,9 @@ MonoBehaviour:
     height: 533
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 1c280000
     m_LastClickedID: 0
-    m_ExpandedIDs: a4fbffffa6fbffff00000000ac280000
+    m_ExpandedIDs: 02d9f1ffbc13f2ffa443f2ff42dbf2ff3272f3ff6250f4ff1aabf4ffbec3f4ffb8c7f4ffdcd9f4ffb6e5f4ff70f1f4ff88fef4ff8421f5ffec2ff5ff343cf5ffac42f5ff7e47f5fffe4af5ff4650f5ffc653f5ff1462f5fff685f5fffe85f5ff5a90f5ff4a93f5ff289bf5ff3ca4f5ff8edef5ffd206f6ff5487f6ff8a1bf7fff62cf7ffde12f9ff7213f9ffda13f9ff9219f9ff9e7af9fff888f9ff78e6f9ffb6f1f9fff4f4f9fff0cefcff5eecfcffec0efdff0efbffffa6fbffff000000005c700000508000005a800000d48100001a86000024860000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,19 +760,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Managers
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Managers
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Users\mario.adi8385\Documents\libertygame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e280000
-    m_LastClickedID: 10318
-    m_ExpandedIDs: 0000000068270000d6270000ec270000122800003a2800005428000000ca9a3bffffff7f
+    m_SelectedIDs: 30280000
+    m_LastClickedID: 10288
+    m_ExpandedIDs: 000000006c27000086270000da2700001628000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -800,7 +800,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000068270000d6270000ec2700001228000054280000
+    m_ExpandedIDs: 000000006c27000086270000da2700001628000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -828,21 +828,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ce310000000000003c320000302a0000482a0000282a0000202a0000382a0000562a0000402a00004e2a0000
+    m_ExpandedInstanceIDs: c6230000ce3100003c320000302a0000482a0000282a0000202a0000382a0000562a0000402a00004e2a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EnemyMeleeAttack
-      m_OriginalName: EnemyMeleeAttack
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13184
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 15}
     m_CreateAssetUtility:

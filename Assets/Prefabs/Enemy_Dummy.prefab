@@ -926,7 +926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Player: {fileID: 0}
   m_CharacterMovement: {fileID: 114871693350538938}
-  m_AllowedDistance: 2
+  m_AllowedDistance: 1
 --- !u!114 &114037583394139946
 MonoBehaviour:
   m_ObjectHideFlags: 1

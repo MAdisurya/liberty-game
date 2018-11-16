@@ -18,6 +18,8 @@ public class EnemyMeleeAttack : EnemyBehaviour {
 
 	protected override void Behave()
 	{
+		if (m_Player == null) { return; }
+
 		// Get the distance between the player and this enemy
 		float distBetweenPlayer = Vector3.Distance(m_Player.position, transform.position);
 

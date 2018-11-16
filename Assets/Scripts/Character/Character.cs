@@ -38,6 +38,15 @@ public class Character : MonoBehaviour {
         Assert.IsNotNull(m_CharacterStateMachine);
     }
 
+    void Start()
+    {
+        if (m_CharacterType == CharacterType.AI)
+        {
+            // Register enemy into enemy manager
+            EnemyManager.Instance.RegisterEnemy(this);
+        }
+    }
+
     public void Die()
     {
         // Set current state to DEAD
@@ -45,7 +54,20 @@ public class Character : MonoBehaviour {
 
         m_CharacterStateMachine.SetState(EMJCharacterStates.CharacterStates.DEAD);
 
+        // Deregister enemy from enemy manager
+        EnemyManager.Instance.DeregisterEnemy(this);
+
         // Destroy this object
         Destroy(gameObject);
+
+        if (EnemyManager.Instance.EnemyCount <= 0)
+        {
+            LevelManager.Instance.GoToNextScene();
+        }
+
+        if (m_CharacterType == CharacterType.PLAYER)
+        {
+            LevelManager.Instance.GoToScene("03_GameOver");
+        }
     }
 }

@@ -69,6 +69,8 @@
      <Compile Include="Assets\Scripts\Managers\CharInputStateManager.cs" />
      <Compile Include="Assets\Scripts\Managers\CharMoveStateManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EMJStateManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Managers\StateManager.cs" />
      <Compile Include="Assets\Scripts\Weapons\MeleeWeapon.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
