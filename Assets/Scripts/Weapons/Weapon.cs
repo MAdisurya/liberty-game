@@ -29,9 +29,15 @@ public class Weapon : MonoBehaviour {
 	[Tooltip("The interval of which attacks are allowed")]
 	public float m_AttackInterval = 0.5f;
 
-	public GameObject WeaponParent {
+	public GameObject WeaponParent 
+	{
 		get { return _weaponParent; }
 		set { _weaponParent = value; }
+	}
+
+	public float AttackInterval
+	{
+		get { return attackInterval; }
 	}
 
 	protected virtual void Start()

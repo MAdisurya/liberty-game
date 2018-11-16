@@ -248,21 +248,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114631237470252590, guid: 39170da4d4717104cab4b24fee0fe99a,
+    - target: {fileID: 114391717666163784, guid: 39170da4d4717104cab4b24fee0fe99a,
         type: 2}
-      propertyPath: characterWeapon
+      propertyPath: m_Player
       value: 
-      objectReference: {fileID: 2093637236}
-    - target: {fileID: 114434369103293896, guid: 39170da4d4717104cab4b24fee0fe99a,
-        type: 2}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 604423686}
+      objectReference: {fileID: 1292201037}
     - target: {fileID: 114011048711405140, guid: 39170da4d4717104cab4b24fee0fe99a,
         type: 2}
       propertyPath: m_Player
       value: 
       objectReference: {fileID: 1292201037}
+    - target: {fileID: 114434369103293896, guid: 39170da4d4717104cab4b24fee0fe99a,
+        type: 2}
+      propertyPath: m_Target
+      value: 
+      objectReference: {fileID: 604423686}
+    - target: {fileID: 114631237470252590, guid: 39170da4d4717104cab4b24fee0fe99a,
+        type: 2}
+      propertyPath: characterWeapon
+      value: 
+      objectReference: {fileID: 2093637236}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 39170da4d4717104cab4b24fee0fe99a, type: 2}
   m_IsPrefabParent: 0
@@ -587,7 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CharacterStateMachine: {fileID: 337654991}
   m_Damage: 1
-  m_AttackInterval: 1
+  m_AttackInterval: 2
   m_RegionSizeX: 1
   m_RegionSizeY: 1
   m_RegionSizeZ: 1

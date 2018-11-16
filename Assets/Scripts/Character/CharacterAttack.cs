@@ -23,19 +23,58 @@ public class CharacterAttack : CharacterAbility {
 	/// <summary>
 	/// Called when character is attacking
 	/// </summary>
-	void Attack()
+	public void PlayerAttack()
 	{
 		if (characterWeapon == null) { return; }
 		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DASHING) { return; }
-		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING) { return; }
 		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DEAD) { return; }
+		if (_character.m_CharacterType == CharacterType.AI) { return; }
 
 		charInputState = EMJCharacterStates.CharInputStateManager.CharInputState;
 
 		if (charInputState == EMJCharacterStates.CharInputStates.CHAR_ATTACK)
 		{
+			_charStateMachine.SetState(EMJCharacterStates.CharacterStates.ATTACKING);
+		}
+		else if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING)
+		{
+			if (characterWeapon.AttackInterval <= 0)
+			{
+				_charStateMachine.SetState(EMJCharacterStates.CharacterStates.IDLE);
+			}
+		}
+
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING)
+		{
 			characterWeapon.UseWeapon();
-			StartCoroutine(EnableThenDisableState(EMJCharacterStates.CharacterStates.ATTACKING, characterWeapon.m_AttackInterval));
+		}
+	}
+
+	/// <summary>
+	/// Called when enemy is attacking
+	/// </summary>
+	public void EnemyAttack()
+	{
+		if (characterWeapon == null) { return; }
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DASHING) { return; }
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.DEAD) { return; }
+		if (_character.m_CharacterType == CharacterType.PLAYER) { return; }
+
+		if (_charStateMachine.GetCharacterState != EMJCharacterStates.CharacterStates.ATTACKING)
+		{
+			_charStateMachine.SetState(EMJCharacterStates.CharacterStates.ATTACKING);
+		}
+		else if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING)
+		{
+			if (characterWeapon.AttackInterval <= 0)
+			{
+				_charStateMachine.SetState(EMJCharacterStates.CharacterStates.IDLE);
+			}
+		}
+
+		if (_charStateMachine.GetCharacterState == EMJCharacterStates.CharacterStates.ATTACKING)
+		{
+			characterWeapon.UseWeapon();
 		}
 	}
 
@@ -43,6 +82,6 @@ public class CharacterAttack : CharacterAbility {
 	{
 		base.Ability();
 
-		Attack();
+		PlayerAttack();
 	}
 }

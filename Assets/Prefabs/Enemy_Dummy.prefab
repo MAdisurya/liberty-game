@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 114463694130332924}
   - component: {fileID: 114142357205878862}
   - component: {fileID: 114011048711405140}
+  - component: {fileID: 114391717666163784}
   - component: {fileID: 136840390890293302}
   m_Layer: 0
   m_Name: Enemy_Dummy
@@ -923,8 +924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44413227c5485134fb2ac5903018fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CharacterMovement: {fileID: 114871693350538938}
   m_Player: {fileID: 0}
+  m_CharacterMovement: {fileID: 114871693350538938}
   m_AllowedDistance: 2
 --- !u!114 &114037583394139946
 MonoBehaviour:
@@ -978,6 +979,20 @@ MonoBehaviour:
   dashForce: 10
   dashCoolDown: 1
   dashDuration: 1
+--- !u!114 &114391717666163784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1771654358898280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c6393c47823a04b8d4c55f8dd33e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 0}
+  _charAttack: {fileID: 114631237470252590}
+  m_MeleeAttackRange: 1
 --- !u!114 &114434369103293896
 MonoBehaviour:
   m_ObjectHideFlags: 1

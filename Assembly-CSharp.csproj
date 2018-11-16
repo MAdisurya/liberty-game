@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Character\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\Character\CharacterStateMachine.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Character\Enemy\EnemyMeleeAttack.cs" />
      <Compile Include="Assets\Scripts\Character\Enemy\EnemyMoveTowardsPlayer.cs" />
      <Compile Include="Assets\Scripts\DamageOnHit.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
