@@ -48,7 +48,6 @@ public class DamageOnHit : MonoBehaviour {
 			if (weaponParent.gameObject.tag != gameObject.tag)
 			{
 				characterHealth.SubtractHealth(weapon.m_Damage);
-				Debug.Log(gameObject.tag + ": " + characterHealth.m_Health);
 
 				if (characterHealth.m_Health <= 0)
 				{
